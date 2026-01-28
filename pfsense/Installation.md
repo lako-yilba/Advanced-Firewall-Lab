@@ -5,9 +5,6 @@ Set up pfSense CE as a firewall in a VirtualBox lab environment
 to understand firewall deployment, interface assignment,
 and network segmentation.
 
-This lab is part of the **Unified Firewall Lab**
-(iptables + pfSense + Scapy).
-
 ---
 
 ## Environment
