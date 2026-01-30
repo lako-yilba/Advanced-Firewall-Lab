@@ -51,7 +51,7 @@ In real production networks, selective ICMP is usually allowed for:
   
 ![Firewall Rules](screenshots/firewall_rules.png)
 
-## 4️ Disabled Default Rules (Design Decision)
+## Disabled Default Rules (Design Decision)
 
 During the firewall configuration, pfSense automatically provides default rules such as:
 
