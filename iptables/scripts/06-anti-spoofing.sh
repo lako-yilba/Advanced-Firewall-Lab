@@ -1,43 +1,16 @@
-# Anti-Spoofing Protection
+#!/bin/bash
+# Anti-Spoofing Protection Rules
 
-## Purpose
-Implements anti-spoofing controls to prevent attackers
-from sending packets with forged or invalid source
-addresses.
+# Drop INVALID packets
+iptables -A INPUT -m conntrack --ctstate INVALID -j DROP
 
-## What Is IP Spoofing
-IP spoofing occurs when an attacker forges the source
-IP address of packets to:
-- Bypass access controls
-- Obscure the true origin of traffic
-- Exploit trust relationships
+# Block loopback spoofing (127.0.0.0/8 not from lo)
+iptables -A INPUT ! -i lo -s 127.0.0.0/8 -j DROP
 
-## Protections Implemented
+# Block RFC1918 addresses on external interface (example: eth0)
+iptables -A INPUT -i eth0 -s 10.0.0.0/8 -j DROP
+iptables -A INPUT -i eth0 -s 172.16.0.0/12 -j DROP
+iptables -A INPUT -i eth0 -s 192.168.0.0/16 -j DROP
 
-### Invalid Packet Dropping
-Packets marked as INVALID by connection tracking are
-dropped immediately to reduce malformed or suspicious
-traffic.
-
-### Loopback Address Protection
-Packets claiming to originate from the loopback range
-(127.0.0.0/8) are dropped unless they arrive on the
-loopback interface.
-
-### Private Address Filtering
-Private (RFC1918) address ranges are blocked when
-received on an external interface, preventing spoofed
-internal addresses from entering the system.
-
-## Security Benefits
-- Reduces attack surface
-- Blocks common spoofing techniques
-- Improves firewall robustness
-
-## Limitations
-- Must be adapted for internal network deployments
-- Interface-specific rules are recommended in production
-
-## Execution Order
-This script runs after all baseline filtering and
-rate limiting rules.
+# Optional: block link-local spoofing
+iptables -A INPUT -i eth0 -s 169.254.0.0/16 -j DROP
