@@ -44,14 +44,14 @@ sniff(
 )
 ```
 
-![script](screenshots/sniffing_script.png)
+![Script](../screenshots/sniffing_script.png)
 
 
 ## 🧪 Testing 
 
 The following commands were used to generate network traffic
 
-![Testing](screenshots/sniffing_testing.png)
+![Testing](../screenshots/sniffing_testing.png)
 
 ## 📡 Output
 
@@ -60,8 +60,8 @@ The sniffing script was executed using:
 sudo python3 basic_sniffer.py
 ``` 
 
-![Output](screenshots/so1.png)
-![Output2](screenshots/so2.png)
+![Output](../screenshots/so1.png)
+![Output](../screenshots/so2.png)
 
 ## ⚠️ Issue Encountered & Resolution
 
