@@ -1,13 +1,15 @@
-# Scapy Packet Crafting & Analysis – Lab Project
+# Scapy Firewall Validation Module
 
-## Overview
-This project demonstrates the use of **Scapy (Python)** to craft and send
-basic network packets for learning and defensive security analysis.
+This directory contains Scapy scripts used to:
+- Capture live network traffic
+- Modify packet headers
+- Validate firewall rules implemented using iptables and pfSense
 
-The goal of this project is **not exploitation**, but to understand:
-- How packets are structured
-- How firewalls interpret traffic
-- How rule-based firewalls (pfSense) react to crafted packets
+## Structure
+- sniffing/: Packet capture and protocol identification
+- packet_modification/: Demonstrates packet field manipulation
+- firewall_testing/: Tests firewall enforcement using crafted packets
 
-This project complements my **pfSense firewall lab** by validating
-allowed and blocked traffic at the packet level.
+## Usage
+All scripts must be run as root:
+sudo python3 script_name.py
