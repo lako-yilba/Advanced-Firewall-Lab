@@ -6,9 +6,9 @@ This directory contains Scapy scripts used to:
 - Validate firewall rules implemented using iptables and pfSense
 
 ## Structure
-- sniffing/: Packet capture and protocol identification
-- packet_modification/: Demonstrates packet field manipulation
-- firewall_testing/: Tests firewall enforcement using crafted packets
+- sniffing: Packet capture and protocol identification
+- packet_modification: Demonstrates packet field manipulation
+- firewall_testing: Tests firewall enforcement using crafted packets
 
 ## Usage
 All scripts must be run as root:
