@@ -39,5 +39,12 @@ internal addresses from entering the system.
 - Interface-specific rules are recommended in production
 
 ## Execution Order
-This script runs after all baseline filtering and
-rate limiting rules.
+This script is applied early in the INPUT chain, before
+any allow rules, to ensure spoofed packets are dropped
+as soon as possible.
+
+## Interface Considerations
+Private (RFC1918) and link-local addresses are blocked
+only when received on the external interface. These
+rules must be adapted for internal or multi-homed
+network environments.
