@@ -46,12 +46,15 @@ sniff(
 
 ![Script](../screenshots/sniffing_script.png)
 
+---
 
 ## 🧪 Testing 
 
 The following commands were used to generate network traffic
 
 ![Testing](../screenshots/sniffing_testing.png)
+
+---
 
 ## 📡 Output
 
@@ -62,6 +65,8 @@ sudo python3 basic_sniffer.py
 
 ![Output](../screenshots/so1.png)
 ![Output](../screenshots/so2.png)
+
+---
 
 ## ⚠️ Issue Encountered & Resolution
 
@@ -75,6 +80,8 @@ Running the following command confirmed the issue:
 ```bash
 ip route
 ```
+---
+
 ### ✅ Resolution: Manually Adding Default Route
 
 To resolve the issue, a default route was added manually using the gateway provided by the VirtualBox host-only network:
@@ -84,6 +91,7 @@ sudo ip route add default via 192.168.56.2 dev eth0
 ```
 After adding the default route, internet connectivity was restored and packet sniffing successfully captured external traffic such as DNS and TCP connections.
 
+---
 
 ### 🧠 Learning Outcome
 
