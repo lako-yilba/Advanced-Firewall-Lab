@@ -1,6 +1,5 @@
-#🔍 Packet Modification using Scapy 
 
----
+# Packet Modification using Scapy 
 ## 📌 Overview
 
 This project demonstrates manual packet crafting and modification using Python and the Scapy library.
