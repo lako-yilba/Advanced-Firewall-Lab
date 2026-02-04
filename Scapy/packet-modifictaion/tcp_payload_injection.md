@@ -48,17 +48,8 @@ Observe how modified packets appear “on the wire”
 
 ## 📜 Script
 
-An IP layer is manually created with a specified destination address.
+![Script](../screenshots/pms.png)
 
-A TCP layer is crafted with a defined destination port.
-
-A custom payload is injected using the Raw() layer.
-
-All layers are stacked together using Scapy’s / operator.
-
-The packet is transmitted using Scapy’s send() function.
-
-This approach provides full control over packet composition, allowing inspection of how headers and payloads are constructed at runtime.
 ---
 ## 🧪 Testing
 
@@ -73,6 +64,10 @@ IP, TCP, and payload layers appeared exactly as crafted in Scapy.
 TTL, flags, and header fields confirmed correct packet transmission.
 
 This confirms that packet modification and payload injection were successful.
+
+![Testing](../screenshots/pmt.png)
+
+
 
 ---
 
