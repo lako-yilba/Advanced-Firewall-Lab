@@ -1,4 +1,4 @@
-  GNU nano 8.7                                                                                                   proto_sniff.py                                                                                                             
+                                                                                                             
 from scapy.all import sniff, IP, TCP, ICMP
 
 def analyze_packet(pkt):
