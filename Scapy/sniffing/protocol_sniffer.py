@@ -1,5 +1,5 @@
                                                                                                              
-from scapy.all import sniff, IP, TCP, ICMP
+from scapy.all import *
 
 def analyze_packet(pkt):
     if TCP in pkt:
