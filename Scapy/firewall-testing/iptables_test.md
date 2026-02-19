@@ -37,7 +37,6 @@ This project validates firewall behavior using crafted packets generated with **
 | **Virtualization** | VirtualBox |
 | **Network Type** | Host-Only (`192.168.56.0/24`) |
 | **Target IP** | `192.168.56.1` |
-| **Firewall** | `iptables` / `pfSense` *(depending on test case)* |
 
 ---
 
